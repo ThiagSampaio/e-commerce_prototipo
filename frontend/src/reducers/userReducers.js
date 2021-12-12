@@ -3,7 +3,7 @@ import {
     USER_LOGIN_SUCCESS,
     USER_LOGIN_FAIL,
     USER_LOGOUT,
-} from '../constants/UserConstants'
+} from '../constants/userConstants'
 
 export const userLoginReducer = (state = {}, action) => {
     switch (action.type) {

@@ -4,7 +4,7 @@ import {
     USER_LOGIN_SUCCESS,
     USER_LOGIN_FAIL,
     USER_LOGOUT,
-} from '../constants/UserConstants'
+} from '../constants/userConstants'
 
 
 export const login = (email, password) => async (dispatch) => {
@@ -21,7 +21,7 @@ export const login = (email, password) => async (dispatch) => {
 
         const { data } = await axios.post(
             '/api/users/login/',
-            { 'usersame': email, 'password': password },
+            { 'username': email, 'password': password },
             config
         )
 
