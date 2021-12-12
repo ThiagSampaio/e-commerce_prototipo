@@ -10,7 +10,6 @@ from django.contrib.auth.models import User
 
 
 from base.serializers import ProductSerializer, UserSerializer, UserSerializerWithToken
-# Create your views here.
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
