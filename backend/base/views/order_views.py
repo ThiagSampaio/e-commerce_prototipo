@@ -7,11 +7,12 @@ from rest_framework.response import Response
 from base.models import Product, Order, OrderItem, ShippingAddress
 from base.serializers import ProductSerializer, OrderSerializer
 
-from rest_framework import serializers, status
+from rest_framework import status
+from datetime import datetime
 
 
 @api_view(['POST'])
-@permission_classes(['IsAuthenticated'])
+@permission_classes([IsAuthenticated])
 def addOrderItems(request):
     user = request.user
     data = request.data
@@ -20,10 +21,9 @@ def addOrderItems(request):
 
     if orderItems and len(orderItems) == 0:
         return Response({'detail': 'No Order Items'}, status=status.HTTP_400_BAD_REQUEST)
-
     else:
 
-        # (1) Criando ordem
+        # (1) Create order
 
         order = Order.objects.create(
             user=user,
@@ -33,7 +33,7 @@ def addOrderItems(request):
             totalPrice=data['totalPrice']
         )
 
-        # (2) Criando endereço de entrega
+        # (2) Create shipping address
 
         shipping = ShippingAddress.objects.create(
             order=order,
@@ -43,8 +43,7 @@ def addOrderItems(request):
             country=data['shippingAddress']['country'],
         )
 
-        # (3) Criar a ordem de itens e relacionar
-
+        # (3) Create order items adn set order to orderItem relationship
         for i in orderItems:
             product = Product.objects.get(_id=i['product'])
 
@@ -57,9 +56,10 @@ def addOrderItems(request):
                 image=product.image.url,
             )
 
-            # (4) Atualizando estoque
+            # (4) Update stock
+
             product.countInStock -= item.qty
             product.save()
 
-    serializer = OrderSerializer(order, many=True)
-    return Response(serializer.data)
+        serializer = OrderSerializer(order, many=False)
+        return Response(serializer.data)
