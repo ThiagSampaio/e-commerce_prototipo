@@ -8,8 +8,6 @@ import {
     CARD_CLEAR_ITEMS,
 } from '../constants/cartConstants'
 
-
-
 export const cartReducer = (state = { cartItems: [], shippingAddress: {} }, action) => {
     switch (action.type) {
         case CARD_ADD_ITEM:

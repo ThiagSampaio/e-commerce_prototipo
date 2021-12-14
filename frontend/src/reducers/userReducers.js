@@ -38,9 +38,7 @@ export const userLoginReducer = (state = {}, action) => {
         default:
             return state
     }
-
 }
-
 
 export const userRegisterReducer = (state = {}, action) => {
     switch (action.type) {
@@ -59,7 +57,6 @@ export const userRegisterReducer = (state = {}, action) => {
         default:
             return state
     }
-
 }
 
 export const userDetailsReducer = (state = { user: {} }, action) => {
@@ -80,7 +77,6 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
         default:
             return state
     }
-
 }
 
 export const userUpdateProfileReducer = (state = {}, action) => {
@@ -100,5 +96,4 @@ export const userUpdateProfileReducer = (state = {}, action) => {
         default:
             return state
     }
-
 }

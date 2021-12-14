@@ -8,7 +8,6 @@ import {
     PRODUCT_DETAILS_FAIL,
 } from '../constants/productConstants'
 
-
 export const productListReducer = (state = { products: [] }, action) => {
     switch (action.type) {
         case PRODUCT_LIST_REQUEST:
@@ -23,7 +22,6 @@ export const productListReducer = (state = { products: [] }, action) => {
         default:
             return state
     }
-
 }
 
 export const productDetailsReducer = (state = { product: { reviews: [] } }, action) => {
@@ -40,5 +38,4 @@ export const productDetailsReducer = (state = { product: { reviews: [] } }, acti
         default:
             return state
     }
-
 }
