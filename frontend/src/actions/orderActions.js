@@ -9,7 +9,7 @@ import {
     ORDER_DETAILS_FAIL,
 } from '../constants/orderConstants'
 
-import { CARD_CLEAR_ITEMS } from '../constants/cartConstants'
+import { CART_CLEAR_ITEMS } from '../constants/cartConstants'
 
 
 export const createOrder = (order) => async (dispatch, getState) => {
@@ -40,9 +40,8 @@ export const createOrder = (order) => async (dispatch, getState) => {
             payload: data
         })
 
-
         dispatch({
-            type: CARD_CLEAR_ITEMS,
+            type: CART_CLEAR_ITEMS,
             payload: data
         })
 
@@ -58,6 +57,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
         })
     }
 }
+
 
 export const getOrderDetails = (id) => async (dispatch, getState) => {
     try {

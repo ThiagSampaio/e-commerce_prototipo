@@ -31,7 +31,6 @@ export const orderCreateReducer = (state = {}, action) => {
                 error: action.payload
             }
 
-
         case ORDER_CREATE_RESET:
             return {}
 
@@ -40,6 +39,7 @@ export const orderCreateReducer = (state = {}, action) => {
             return state
     }
 }
+
 
 export const orderDetailsReducer = (state = { loading: true, orderItems: [], shippingAddress: {} }, action) => {
     switch (action.type) {
@@ -60,10 +60,6 @@ export const orderDetailsReducer = (state = { loading: true, orderItems: [], shi
                 loading: false,
                 error: action.payload
             }
-
-
-        case ORDER_CREATE_RESET:
-            return {}
 
 
         default:
