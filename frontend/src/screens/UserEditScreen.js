@@ -8,7 +8,7 @@ import { getUserDetails, updateUser } from '../actions/userActions'
 import FormContainer from '../components/FormContainer'
 import { USER_UPDATE_RESET } from '../constants/userConstants'
 
-function EditUserScreen({ match, history }) {
+function UserEditScreen({ match, history }) {
 
     const userId = match.params.id
 
@@ -117,4 +117,4 @@ function EditUserScreen({ match, history }) {
     )
 }
 
-export default EditUserScreen
+export default UserEditScreen
