@@ -17,23 +17,23 @@ function Header() {
 
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelec>
+            <Navbar bg="light" variant="light" expand="lg" collapseOnSelec>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>ThiagoShop</Navbar.Brand>
+                        <Navbar.Brand>DoshDonuts</Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
 
                             <LinkContainer to='/cart'>
-                                <Nav.Link><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
+                                <Nav.Link><i className="fas fa-shopping-cart"></i>Carrinho</Nav.Link>
                             </LinkContainer>
 
                             {userInfo ? (
                                 <NavDropdown title={userInfo.name} id='username'>
                                     <LinkContainer to='/profile'>
-                                        <NavDropdown.Item>Profile</NavDropdown.Item>
+                                        <NavDropdown.Item>Perfil</NavDropdown.Item>
                                     </LinkContainer>
                                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                 </NavDropdown>

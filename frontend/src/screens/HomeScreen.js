@@ -5,6 +5,7 @@ import Product from '../components/Product'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import { listProducts } from '../actions/productActions'
+import ProductCarousel from '../components/ProductCarousel'
 
 
 
@@ -22,7 +23,8 @@ function HomeScreen() {
 
     return (
         <div>
-            <h1>Latest Products</h1>
+            <ProductCarousel />
+            <h1>Produtos</h1>
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     :
