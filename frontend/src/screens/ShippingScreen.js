@@ -26,11 +26,11 @@ function ShippingScreen({ history }) {
     return (
         <FormContainer>
             <CheckoutSteps step1 step2 />
-            <h1>Shipping</h1>
+            <h1>Entrega</h1>
             <Form onSubmit={submitHandler}>
 
                 <Form.Group controlId='address'>
-                    <Form.Label>Address</Form.Label>
+                    <Form.Label>Endereço</Form.Label>
                     <Form.Control
                         required
                         type='text'
@@ -42,7 +42,7 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Form.Group controlId='city'>
-                    <Form.Label>city</Form.Label>
+                    <Form.Label>Cidade</Form.Label>
                     <Form.Control
                         required
                         type='text'
@@ -54,7 +54,7 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Form.Group controlId='postalCode'>
-                    <Form.Label>postalCode</Form.Label>
+                    <Form.Label>CEP</Form.Label>
                     <Form.Control
                         required
                         type='text'
@@ -66,7 +66,7 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Form.Group controlId='country'>
-                    <Form.Label>Country</Form.Label>
+                    <Form.Label>Bairro</Form.Label>
                     <Form.Control
                         required
                         type='text'
@@ -78,7 +78,7 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Button type='submit' variante='primary'>
-                    Continue
+                    Continuar
                 </Button>
 
             </Form>

@@ -106,11 +106,11 @@ function ProductEditScreen({ match, history }) {
 
         <div>
             <Link to='/admin/productlist'>
-                Go back
+                Voltar
             </Link>
 
             <FormContainer>
-                <h1>Edit User</h1>
+                <h1>Editar Produto</h1>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
@@ -128,7 +128,7 @@ function ProductEditScreen({ match, history }) {
 
 
                         <Form.Group controlId='price'>
-                            <Form.Label>Price</Form.Label>
+                            <Form.Label>Preço</Form.Label>
                             <Form.Control
                                 type='number'
                                 placeholder='Enter Price'
@@ -161,7 +161,7 @@ function ProductEditScreen({ match, history }) {
                         </Form.Group>
 
                         <Form.Group controlId='brand'>
-                            <Form.Label>Brand</Form.Label>
+                            <Form.Label>Marca</Form.Label>
                             <Form.Control
                                 type='text'
                                 placeholder='Enter brand'
@@ -185,7 +185,7 @@ function ProductEditScreen({ match, history }) {
 
 
                         <Form.Group controlId='category'>
-                            <Form.Label>Category</Form.Label>
+                            <Form.Label>Categoria</Form.Label>
                             <Form.Control
                                 type='text'
                                 placeholder='Enter category'

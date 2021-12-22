@@ -56,11 +56,11 @@ function ProductListScreen({ history, match }) {
         <div>
             <Row clasName='align-items-center'>
                 <Col>
-                    <h1> Product</h1>
+                    <h1> Produtos</h1>
                 </Col>
                 <Col clasName='text-right'>
                     <Button className='my-3' onClick={createProductHandler}>
-                        <i className='fas fa-plus'></i> Create Product
+                        <i className='fas fa-plus'></i> Criar produto
                     </Button>
                 </Col>
             </Row>
@@ -80,7 +80,7 @@ function ProductListScreen({ history, match }) {
                                 <tr>
                                     <th>ID</th>
                                     <th>NAME</th>
-                                    <th>PRICE</th>
+                                    <th>PREÇO</th>
                                     <th>CATEGORY</th>
                                     <th>BRAND</th>
                                     <th></th>

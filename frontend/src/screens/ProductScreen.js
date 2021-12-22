@@ -115,7 +115,7 @@ function ProductScreen({ match, history }) {
                                                             className='btn-block'
                                                             disabled={product.countInStock == 0}
                                                             type='button'>
-                                                            Add to Cart
+                                                            Adicionar
                                                         </Button>
                                                     </Col>
 
@@ -150,7 +150,7 @@ function ProductScreen({ match, history }) {
                                                 {userInfo ? (
                                                     <Form onSubmit={submitHandler}>
                                                         <Form.Group controlId='rating'>
-                                                            <Form.Label>Rating</Form.Label>
+                                                            <Form.Label>Avaliação</Form.Label>
                                                             <Form.Control
                                                                 as='select'
                                                                 value={rating}

@@ -59,7 +59,7 @@ function UserEditScreen({ match, history }) {
 
         <div>
             <Link to='/admin/userlist'>
-                Go back
+                Voltar
             </Link>
 
             <FormContainer>
@@ -69,7 +69,7 @@ function UserEditScreen({ match, history }) {
                 {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                     <Form onSubmit={submitHandler}>
                         <Form.Group controlId='name'>
-                            <Form.Label>Name</Form.Label>
+                            <Form.Label>Nome</Form.Label>
                             <Form.Control
                                 type='name'
                                 placeholder='Enter Name'
@@ -80,7 +80,7 @@ function UserEditScreen({ match, history }) {
                         </Form.Group>
 
                         <Form.Group controlId='email'>
-                            <Form.Label>Email Address</Form.Label>
+                            <Form.Label>Endereço de Email</Form.Label>
                             <Form.Control
                                 type='email'
                                 placeholder='Enter Email'
@@ -92,7 +92,7 @@ function UserEditScreen({ match, history }) {
 
 
                         <Form.Group controlId='isadmin'>
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Senha</Form.Label>
                             <Form.Check
                                 type='checkbox'
                                 label='Is Admin'
@@ -105,7 +105,7 @@ function UserEditScreen({ match, history }) {
 
 
                         <Button type='submit' variant='primary'>
-                            Update
+                            Atualizar
                         </Button>
                     </Form>
 

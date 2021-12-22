@@ -84,11 +84,11 @@ function OrderScreen({ match, history }) {
                 <Col md={8}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Shipping</h2>
-                            <p><strong>Name: </strong> {order.user.name}</p>
+                            <h2>Endereço de entrega</h2>
+                            <p><strong>Nome: </strong> {order.user.name}</p>
                             <p><strong>Email: </strong><a href={`mailto:${order.user.email}`}>{order.user.email}</a></p>
                             <p>
-                                <strong>Shipping: </strong>
+                                <strong>Entrega: </strong>
                                 {order.shippingAddress.address},  {order.shippingAddress.city}
                                 {'  '}
                                 {order.shippingAddress.postalCode},
@@ -97,16 +97,16 @@ function OrderScreen({ match, history }) {
                             </p>
 
                             {order.isDelivered ? (
-                                <Message variant='success'>Delivered on {order.deliveredAt}</Message>
+                                <Message variant='success'>Entrega em {order.deliveredAt}</Message>
                             ) : (
-                                <Message variant='warning'>Not Delivered</Message>
+                                <Message variant='warning'>Não entregue</Message>
                             )}
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            <h2>Payment Method</h2>
+                            <h2>Método de pagamento</h2>
                             <p>
-                                <strong>Method: </strong>
+                                <strong>Método: </strong>
                                 {order.paymentMethod}
                             </p>
                             {order.isPaid ? (
@@ -118,9 +118,9 @@ function OrderScreen({ match, history }) {
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            <h2>Order Items</h2>
+                            <h2>Itens comprados</h2>
                             {order.orderItems.length === 0 ? <Message variant='info'>
-                                Order is empty
+                                Não existe pedido
                             </Message> : (
                                 <ListGroup variant='flush'>
                                     {order.orderItems.map((item, index) => (
@@ -152,34 +152,34 @@ function OrderScreen({ match, history }) {
                     <Card>
                         <ListGroup variant='flush'>
                             <ListGroup.Item>
-                                <h2>Order Summary</h2>
+                                <h2>Resumo do pedido</h2>
                             </ListGroup.Item>
 
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Items:</Col>
-                                    <Col>${order.itemsPrice}</Col>
+                                    <Col>R${order.itemsPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
 
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Shipping:</Col>
-                                    <Col>${order.shippingPrice}</Col>
+                                    <Col>Entrega:</Col>
+                                    <Col>R${order.shippingPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
 
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Tax:</Col>
-                                    <Col>${order.taxPrice}</Col>
+                                    <Col>Taxa:</Col>
+                                    <Col>R${order.taxPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
 
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Total:</Col>
-                                    <Col>${order.totalPrice}</Col>
+                                    <Col>R${order.totalPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
 
@@ -207,7 +207,7 @@ function OrderScreen({ match, history }) {
                                     className='btn btn-block'
                                     onClick={deliverHandler}
                                 >
-                                    Mark As Delivered
+                                    Marcado como entregue
                                 </Button>
                             </ListGroup.Item>
                         )}
